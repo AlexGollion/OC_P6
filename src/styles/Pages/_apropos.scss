@@ -1,0 +1,36 @@
+.aPropos {
+    .collapseTitle, .collapseText {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media(max-width: 850px) 
+{
+    .aPropos {
+        margin-top: 7%;
+
+        .image {
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+
+        .collapse {
+            margin-left: 3%;
+            margin-right: 3%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+            .collapseTitle, .collapseText {
+                margin-left: 0px;
+                margin-right: 0px;
+                font-size: 55%;
+            }
+
+            button {
+                margin: 0px;
+            }
+        }
+    }
+
+}

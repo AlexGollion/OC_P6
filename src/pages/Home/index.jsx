@@ -1,12 +1,13 @@
-import '../../styles/accueil.scss';
 import Card from '../../components/Card';
 import Data from '../../logement.json';
+import image from '../../assets/accueil.png'
 
 function Home() {
   return (
-    <>
+    <div className='accueil'>
       <div className='image'>
-        <p>Chez vous, partout et ailleurs</p>
+        <img src={image} alt="Des Montagnes" />
+        <p>Chez vous, <br/> partout et ailleurs</p>
       </div>
       <div className='gallery'>
         {Data.map((location) => (
@@ -19,7 +20,7 @@ function Home() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

@@ -7,6 +7,7 @@ import Propos from './pages/A_Propos';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Error from './components/Error';
+import "./styles/main.scss";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,9 @@ root.render(
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/logement' element={<Logement />} />
+        <Route path='/logement' element={<Logement />} >
+          <Route path=':id' element={<Logement />} />
+        </Route>
         <Route path='/a_propos' element={<Propos />} />
         <Route path='*' element={<Error />} />
       </Routes>

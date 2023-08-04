@@ -1,0 +1,268 @@
+.logement {
+
+    font-size: larger;
+
+    .image {
+        position: relative;
+
+        img {
+            height: 500px;
+            filter: brightness(100%);
+        }
+    
+        button {
+            position: absolute;
+            .icon {
+                font-size: 50px;
+            }
+        }
+    
+        .next, .prev {
+            top: calc(50% - 50px);
+        }
+    
+        .next {
+            right: 2%;
+    
+            .icon {
+                transform: rotate(90deg);
+            }
+        }
+    
+        .prev {
+            left: 2%;
+    
+            .icon {
+                transform: rotate(-90deg);
+            }
+        }
+    
+        .btn {
+            p {
+                position: absolute;
+                left: 50%;
+                top: 90%;
+                font-size: 20px;
+                color: $color-white;
+            }
+        }
+    }
+
+    h1 {
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+
+    p {
+        margin-top: 5px;
+    }
+
+    div {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $primary-color;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0px;
+        margin-bottom: 25px;
+
+        img {
+            border-radius: 50%;
+            margin-left: 5px;
+            height: 100px;
+        }
+
+        figcaption {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+    }
+
+    .star {
+        display: flex;
+        justify-content: space-between;
+        right: 0%;
+        width: 55%;
+        margin-top: 30px;
+
+        .starFill, .starVoid {
+            margin-right: 7px;
+            margin-left: 7px;
+            font-size: 30px;
+        }
+
+        .lastStar {
+            margin-right: 0px;
+        }
+
+        .starVoid {
+            color: $color-gray;
+        }    
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0px;
+
+        p {
+            border-radius: 17px;
+            background-color: $primary-color;
+            color: $color-white;
+            padding: 10px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-weight: 100;
+            font-size: large;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        ._0 {
+            margin-left: 0px;
+        }
+    }
+
+    .collapse {
+        width: 48%;
+
+        .collapseTitle {
+            h2 {
+                font-weight: 100;
+                font-size: large;
+            }
+        }
+
+        button {
+            width: auto;
+        }
+    }
+}
+
+@media(max-width: 850px) 
+{
+    .logement { 
+        margin-left: 3%;
+        margin-right: 3%;
+
+        .image {
+            margin-top: 10%;
+            margin-bottom: 0px;
+            aspect-ratio: 1/1;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .next, .prev {
+                top: calc(50% - 25px);
+
+                .icon {
+                    font-size: 25px;
+                }
+            }
+
+            .btn {
+                p {
+                    display: none;
+                }
+            }
+        }
+        
+        .information {
+            flex-direction: column;
+
+            h1 {
+                font-size: 18pt;
+            }
+
+            p {
+                font-size: 14pt;
+                margin-top: 2%;
+            }
+
+            .collapse {
+                width: auto;
+                margin-bottom: 20px;
+
+                .collapseTitle {
+                    h2 {
+                        font-size: 12pt;
+                    }
+                }
+
+                .collapseText {
+                    p, li {
+                        font-size: 10pt;
+                    }
+
+                    ul {
+                        padding: 0px;
+                    }
+                }
+
+                button {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .tags {
+            p {
+                margin-right: 2%;
+                font-size: 8pt;
+                text-align: center;
+                padding: 2%;
+                padding-left: 4%;
+                padding-right: 4%;
+                border-radius: 10px;
+            }
+        }
+
+        .host {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        figure {
+            align-items: center;
+            margin-bottom: 0px;
+            width: 50%;
+
+            figcaption {
+                font-size: 12pt;
+                margin-right: 0px;
+            }
+        }
+
+        .star {
+            width: auto;
+            margin-top: 0px;
+
+            .starFill, .starVoid {
+                margin-right: 3%;
+                margin-left: 3%;
+                font-size: 12pt;
+            }
+        }
+    }
+}

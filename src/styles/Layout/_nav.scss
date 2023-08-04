@@ -1,0 +1,43 @@
+nav {
+    display: flex;
+    align-items: center;
+
+    .link {
+        text-decoration: none;
+        color: $primary-color;
+        margin-left: 15px;
+        margin-right: 15px;
+
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.navMobile {
+    display: none;
+}
+
+@media(max-width: 850px) 
+{
+    .navDesktop {
+        display: none;
+    }
+
+    .navMobile {
+        display: flex;
+    }
+
+    nav {
+        width: 50%;
+        margin-left: 5%;
+        justify-content: flex-end;
+
+        .link {
+            font-size: 75%;
+            margin-left: 2%;
+            margin-right: 10%;
+        }
+    }
+}

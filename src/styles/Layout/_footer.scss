@@ -1,0 +1,47 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-black;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    img {
+        display: flex;
+        width: 8%;
+        height: auto;
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: large;
+        font-weight: 500;
+        margin-top: 15px;
+        color: $color-white;
+    }
+
+    br {
+        display: none;
+    }
+}
+
+@media(max-width: 850px)
+{
+    .footer {
+        img {
+            width: 35%;
+        }
+
+        p {
+            font-size: 70%;
+        }
+
+        br {
+            display: inline;
+        }
+    }
+}
